@@ -1,0 +1,16 @@
+{
+  "en": {
+    "main" : {
+      "title": "Rick n Morty's List",
+      "welcome": "Welcome!",
+      "sub-welcome": "Here you can visit all the Rick n Morty characters, see any episode, location to get schwifty all the time!"
+    }
+  },
+  "pt-BR": {
+    "main" : {
+      "title": "Rick n Morty's List",
+      "welcome": "Bem-vindo!",
+      "sub-welcome": "Aqui você pode conhecer todos os personagens de Rick n Morty, qualquer episódio, todos os lugares do universo para que você possa ficar tranquileba o tempo todo!"
+    }
+  }
+}

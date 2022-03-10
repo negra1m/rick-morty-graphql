@@ -2,4 +2,21 @@
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+@font-face {
+  font-family: "Riick";
+  src: url("/assets/fonts/rick.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: "Default";
+  src: url("/assets/fonts/lemon.otf") format("opentype")
 }
