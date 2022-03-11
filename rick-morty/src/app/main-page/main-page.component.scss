@@ -77,22 +77,19 @@ $holo-color: #00FCFC;
           }
 
           &> .hologram {
-            animation: holographic 2s ease-in alternate;
-            z-index: 2;
+            z-index: 1;
             position: absolute;
-            bottom: -50rem;
+            bottom: -48rem;
             width: 30%;
             min-width: 26rem;
             height: 2vh;
-            margin: -5px auto 0;
-            background-color: rgba(0, 252, 252, 1);
+            left: -12rem;
+            background-color: #00fcfc;
             border-radius: 100%;
-            filter: blur(1px);
+            filter: blur(0px);
             transform: perspective(40px) rotateX(352deg);
             transform-style: preserve-3d;
             animation: holographic 1.5s infinite alternate;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
 
             &:after {
               position: absolute;
