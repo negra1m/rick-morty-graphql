@@ -1,0 +1,194 @@
+$defaultPadding: 3rem 3rem; //TODO: export later to the main css property files (td)
+$holo-color: #00FCFC;
+
+:host {
+  font-family: 'Default';
+
+  & > section {
+        display: flex;
+        max-width: 70%;
+
+        & > .info-section {
+          padding: $defaultPadding;
+          backdrop-filter: blur(10px);
+          max-width: 70%;
+
+          p {
+            font-size: 3rem;
+          }
+          span {
+            font-size: 1.4rem;
+          }
+          & > .btn-group {
+            padding-top: 3rem;
+            justify-self: flex-end;
+
+            &> a {
+              color: white;
+              text-decoration: underline;
+              transition: all 2s ease;
+
+              &:hover {
+                text-shadow: 0 0 0px #fff, 0 0 10px #00FCFC, 0 0 20px #00FCFC, 0 0 30px #00FCFC, 0 0 40px #00FCFC, 0 0 50px #00FCFC;
+              }
+            }
+          }
+        }
+
+        & > .img-section {
+          position: fixed;
+          left: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+
+          &> img {
+            mix-blend-mode: difference;
+            bottom: -7rem;
+            width: 30%;
+            min-width: 26rem;
+            position: fixed;
+            color: rgb(223, 191, 191);
+            animation: glitch 2.5s 2s infinite alternate;
+            filter: opacity(0.65) blur(0.6px)  drop-shadow(1px -1px 10px #2beaea) saturate(0.75);
+
+            &::before {
+              content: attr(data-text);
+              position: absolute;
+              left: -2px;
+              text-shadow: -5px 0 magenta;
+              background: black;
+              overflow: hidden;
+              top: 0;
+              animation: noise-1 2s linear infinite alternate-reverse, glitch 3s 5.05s infinite;
+            }
+
+            &::after {
+              content: attr(data-text);
+              position: absolute;
+              left: 2px;
+              text-shadow: -5px 0 lightgreen;
+              background: black;
+              overflow: hidden;
+              top: 0;
+              animation: noise-2 3s linear infinite alternate-reverse, glitch 1s 5s infinite;
+            }
+
+          }
+
+          &> .hologram {
+            animation: holographic 2s ease-in alternate;
+            z-index: 2;
+            position: absolute;
+            bottom: -50rem;
+            width: 30%;
+            min-width: 26rem;
+            height: 2vh;
+            margin: -5px auto 0;
+            background-color: rgba(0, 252, 252, 1);
+            border-radius: 100%;
+            filter: blur(1px);
+            transform: perspective(40px) rotateX(352deg);
+            transform-style: preserve-3d;
+            animation: holographic 1.5s infinite alternate;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+            &:after {
+              position: absolute;
+              left: -10px;
+              right: -10px;
+              content: "";
+              height: 10px;
+              background-color: rgba($holo-color, .5);
+              border-radius: 100%;
+              filter: blur(2.5px);
+            }
+
+            + .holo {
+              animation-duration: .75s;
+              opacity: .5;
+            }
+          }
+        }
+      }
+    }
+
+/*
+  credits for johnlouie04 for the holographic efffect at code pen
+  I just changed a few things.
+  thx!
+*/
+
+@keyframes holographic {
+  from {
+   will-change: box-shadow;
+   box-shadow:
+   0 -75px 5px rgba($holo-color, .15),
+   0 -1px 2px rgba($holo-color, .5),
+   0 -45px 5px rgba($holo-color, .15),
+   0 -2px 3px rgba($holo-color, .5),
+   0 -3px 4px rgba($holo-color, .5),
+   0 -4px 6px rgba($holo-color, .5),
+   0 -5px 10px rgba($holo-color, .75),
+   0 -7px 20px rgba($holo-color, .75),
+   0 -10px 30px rgba($holo-color, .75),
+   0 -15px 40px rgba($holo-color, .75),
+   0 -25px 50px rgba($holo-color, .75),
+   0 -35px 60px rgba($holo-color, .85),
+   0 -45px 70px rgba($holo-color, .95),
+   0 -65px 80px rgba($holo-color, 1),
+   0 -75px 90px rgba($holo-color, 1),
+   ;
+  } to {
+   will-change: unset;
+   box-shadow:
+   0 -1px 5px rgba($holo-color, .15),
+   0 -1px 2px rgba($holo-color, .5),
+   0 -1px 5px rgba($holo-color, .15),
+   0 -2px 3px rgba($holo-color, .5),
+   0 -3px 4px rgba($holo-color, .5),
+   0 -4px 6px rgba($holo-color, .5),
+   0 -5px 7px rgba($holo-color, .75),
+   0 -7px 10px rgba($holo-color, .75),
+   0 -10px 15px rgba($holo-color, .75),
+   0 -15px 20px rgba($holo-color, .75),
+   0 -25px 25px rgba($holo-color, .75),
+   0 -35px 30px rgba($holo-color, .85),
+   0 -45px 35px rgba($holo-color, .95),
+   0 -65px 40px rgba($holo-color, 1),
+   0 -75px 50px rgba($holo-color, 1),
+   ;
+  }
+ }
+
+@keyframes glitch {
+  1%{
+    transform: rotateX(10deg) skewX(90deg);
+  }
+  2%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+
+@keyframes noise-1 {
+  $steps: 20;
+  @for $i from 1 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(70);
+      $bottom: random(71 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+
+@keyframes noise-2 {
+  $steps: 30;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(70);
+      $bottom: random(71 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
