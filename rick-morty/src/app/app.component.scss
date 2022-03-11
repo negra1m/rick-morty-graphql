@@ -31,8 +31,31 @@ h1 {
   margin: 0;
   padding: 1rem 2rem;
   color: #11b1c9;
-  font-size: 5rem;
+  font-size: 6.5rem;
   font-family: 'Riick';
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #c9dc61;
+}
+
+:host {
+  font-family: 'Default';
+  footer {
+    &.social {
+      position: fixed;
+      bottom: 0;
+      padding: 3rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      width: 17rem;
+      min-width: 17rem;
+
+      &>a {
+        filter: hue-rotate(85deg);
+
+        &:hover{
+          filter: hue-rotate(347deg);
+        }
+      }
+    }
+  }
 }

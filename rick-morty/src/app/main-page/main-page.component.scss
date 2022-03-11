@@ -4,25 +4,14 @@ $holo-color: #00FCFC;
 :host {
   font-family: 'Default';
 
-  & > .content {
-      position: fixed;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      margin-left: 20px;
-      margin-right: 20px;
-
-      & > section {
+  & > section {
         display: flex;
-        justify-content: space-around;
-        align-items: start;
-        flex-direction: row;
+        max-width: 70%;
 
         & > .info-section {
-          display: flex;
-          justify-content: space-around;
-          flex-direction: column;
           padding: $defaultPadding;
+          backdrop-filter: blur(10px);
+          max-width: 70%;
 
           p {
             font-size: 3rem;
@@ -33,16 +22,31 @@ $holo-color: #00FCFC;
           & > .btn-group {
             padding-top: 3rem;
             justify-self: flex-end;
+
+            &> a {
+              color: white;
+              text-decoration: underline;
+              transition: all 2s ease;
+
+              &:hover {
+                text-shadow: 0 0 0px #fff, 0 0 10px #00FCFC, 0 0 20px #00FCFC, 0 0 30px #00FCFC, 0 0 40px #00FCFC, 0 0 50px #00FCFC;
+              }
+            }
           }
         }
 
         & > .img-section {
-          width: 100%;
+          position: fixed;
+          left: 65%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
 
           &> img {
             mix-blend-mode: difference;
             bottom: -7rem;
             width: 30%;
+            min-width: 26rem;
             position: fixed;
             color: rgb(223, 191, 191);
             animation: glitch 2.5s 2s infinite alternate;
@@ -76,8 +80,9 @@ $holo-color: #00FCFC;
             animation: holographic 2s ease-in alternate;
             z-index: 2;
             position: absolute;
-            bottom: -25rem;
+            bottom: -50rem;
             width: 30%;
+            min-width: 26rem;
             height: 2vh;
             margin: -5px auto 0;
             background-color: rgba(0, 252, 252, 1);
@@ -108,7 +113,6 @@ $holo-color: #00FCFC;
         }
       }
     }
-  }
 
 /*
   credits for johnlouie04 for the holographic efffect at code pen
