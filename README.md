@@ -3,6 +3,7 @@
 Welcome to the Rick n Morty's List! Where you can find all Rick n Morty Characters, Locations, Episodes and the most great part, you can see it all developed using Angular.
 
 Enjoy this experience... 
+![image](https://user-images.githubusercontent.com/19765227/157983319-d9593573-1447-4f89-82fd-b1d5aa531712.png)
 
 ## Installation
 
@@ -19,3 +20,4 @@ Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
