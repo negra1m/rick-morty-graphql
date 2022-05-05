@@ -79,8 +79,8 @@ $holo-color: #00FCFC;
           &> .hologram {
             animation: holographic 2s ease-in alternate;
             z-index: 2;
-            position: absolute;
-            bottom: -50rem;
+            position: fixed;
+            bottom: -2%;
             width: 30%;
             min-width: 26rem;
             height: 2vh;

@@ -1,1 +1,15 @@
-<p>card works!</p>
+<ng-container>
+<div class="card">
+  <div class="img">
+    <img src="{{cardData.image}}">
+  </div>
+  <div class="title">
+    <h3>{{cardData.name}}</h3>
+  </div>
+  <div class="content">
+    <span>{{cardData.status}}</span>
+    <span>{{cardData.origin}}</span>
+    <span>{{cardData.episode.name}}</span>
+  </div>
+</div>
+</ng-container>
