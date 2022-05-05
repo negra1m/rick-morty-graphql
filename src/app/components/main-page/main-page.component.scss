@@ -51,9 +51,14 @@ $holo-color: #00fcfc;
       min-width: 26rem;
       position: fixed;
       color: rgb(223, 191, 191);
-      animation: glitch 2.5s 2s infinite alternate;
+      // animation: glitch 2.5s 2s infinite alternate;
       filter: opacity(0.65) blur(0.6px) drop-shadow(1px -1px 10px #2beaea)
         saturate(0.75);
+
+      &:hover {
+        animation: glitch 2.5s 0s infinite alternate;
+      }
+
 
       &::before {
         content: attr(data-text);
