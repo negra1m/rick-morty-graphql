@@ -1,23 +1,27 @@
-# Rick n Morty List
+# RickMorty
 
-Welcome to the Rick n Morty's List! Where you can find all Rick n Morty Characters, Locations, Episodes and the most great part, you can see it all developed using Angular.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
-Enjoy this experience... 
-![image](https://user-images.githubusercontent.com/19765227/157983319-d9593573-1447-4f89-82fd-b1d5aa531712.png)
+## Development server
 
-## Installation
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Once you have NodeJS installed, use Node Package Manager to set up the role application.
+## Code scaffolding
 
-```bash
-npm i
-```
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Build
 
-Please make sure to update tests as appropriate.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+## Running unit tests
 
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
