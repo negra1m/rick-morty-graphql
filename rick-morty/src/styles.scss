@@ -7,10 +7,6 @@ html, body {
   color: white;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
 @font-face {
   font-family: "Riick";
   src: url("/assets/fonts/rick.ttf") format("truetype")
@@ -19,4 +15,35 @@ h1 {
 @font-face {
   font-family: "Default";
   src: url("/assets/fonts/lemon.otf") format("opentype")
+}
+
+
+@media screen and (max-width: 600px) and (min-width: 350px)  {
+  p {
+    font-size: 2.5rem!important;
+  }
+  .img-section {
+    z-index: -1!important;
+  }
+
+  .info-section {
+    width: 100%!important;
+    padding: 1rem;
+
+    span {
+      font-size: 1rem!important;
+    }
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .content {
+    height: 100vh;
+  }
+
+  footer.social {
+    padding: 5% 9%!important;
+  }
 }
