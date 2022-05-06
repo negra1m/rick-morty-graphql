@@ -2,8 +2,8 @@
   <div class="selection">
     <p-tabView>
       <p-tabPanel tooltip="Characters" header="Characters" [selected]="true">
-        <div *ngFor="let item of charList" class="card">
-          <app-card [cardData]="item"></app-card>
+        <div class="cards">
+          <app-card *ngFor="let item of charList" [cardData]="item"></app-card>
         </div>
       </p-tabPanel>
       <p-tabPanel tooltip="Location" header="Location">
