@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+@font-face {
+  font-family: "Riick";
+  src: url("/assets/fonts/rick.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: "Default";
+  src: url("/assets/fonts/lemon.otf") format("opentype")
+}
+
+
+@media screen and (max-width: 600px) and (min-width: 300px)  {
+  p {
+    font-size: 2.5rem!important;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  .img-section {
+    z-index: -1!important;
+  }
+
+  .info-section {
+    width: 100%!important;
+    padding: 1rem;
+
+    span {
+      font-size: 1rem!important;
+    }
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .content {
+    height: 100vh;
+  }
+
+  footer.social {
+    padding: 5% 9%!important;
+  }
+}
+
+@media screen and (max-height: 700px) and (min-height: 300px)  {
+  .info-section {
+    width: 50%!important;
+    padding: 0.5rem;
+
+    span {
+      font-size: 0.9rem!important;
+    }
+
+    p {
+      font-size: 2.5rem!important;
+      margin: 0;
+    }
+
+    footer.social {
+      padding: 1rem 1rem!important;
+    }
+
+  }
+}
+
+@keyframes noise-1 {
+  $steps: 20;
+  @for $i from 1 through $steps {
+    #{percentage($i*calc(1 / $steps))} {
+      $top: random(70);
+      $bottom: random(71 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+
+@keyframes noise-2 {
+  $steps: 30;
+  @for $i from 0 through $steps {
+    #{percentage($i*calc(1 / $steps))} {
+      $top: random(70);
+      $bottom: random(71 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}

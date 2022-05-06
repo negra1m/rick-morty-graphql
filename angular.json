@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -13,7 +16,7 @@
           "strict": true
         }
       },
-      "root": "",
+      "root": "e2e",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
@@ -40,8 +43,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "8mb",
+                  "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -126,7 +129,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "../node_modules/font-awesome/scss/font-awesome.scss"
+              "./node_modules/font-awesome/scss/font-awesome.scss"
             ],
             "scripts": []
           },
