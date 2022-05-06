@@ -1,0 +1,28 @@
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.selection {
+  background-image: url(../../../assets/background.webp);
+  background-repeat: no-repeat;
+  background-position: top;
+  // max-height: 150vh;
+
+}
+
+:host ::ng-deep .p-tabview-nav{
+  color: grey;
+  font-family: 'Default';
+  padding: 2rem;
+
+  & .p-tabview-title {
+    line-height: 2;
+    margin-right: 2rem;
+  }
+
+  & .p-tabview-title:hover {
+      filter: blur(1px);
+  }
+}

@@ -1,9 +1,13 @@
-import { CharacterStatus } from "./status.model";
-
 export interface CardData {
   image : string,
-  status: CharacterStatus,
+  status: statusChar,
   name: string,
-  origin: string,
+  origin: any,
   episode: any
+}
+
+export enum statusChar {
+  'Alive' = 'Vivo',
+  'Dead' = 'Morto',
+  'Unknown' = 'Desconhecido'
 }
