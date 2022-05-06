@@ -6,8 +6,8 @@ import { CardViewerComponent } from './screens/card-viewer/card-viewer.component
 import { RouterModule } from '@angular/router';
 
 const routes = [
-  { path: 'main', component: MainPageComponent },
-  { path: 'details', component: CardViewerComponent },
+  { path: 'main', component: MainPageComponent, loadChildren: () => import('./graphql.module').then(m => m.GraphQLModule) },
+  { path: 'listing', component: CardViewerComponent },
   { path: '', redirectTo: '/main', pathMatch: 'full' }
 ]
 
@@ -16,6 +16,7 @@ const routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(routes)
-  ]
+  ],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
