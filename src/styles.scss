@@ -22,6 +22,7 @@ html, body {
   p {
     font-size: 2.5rem!important;
     margin: 0;
+    margin-bottom: 2rem;
   }
   .img-section {
     z-index: -1!important;
@@ -46,6 +47,27 @@ html, body {
 
   footer.social {
     padding: 5% 9%!important;
+  }
+}
+
+@media screen and (max-height: 700px) and (min-height: 300px)  {
+  .info-section {
+    width: 50%!important;
+    padding: 0.5rem;
+
+    span {
+      font-size: 0.9rem!important;
+    }
+
+    p {
+      font-size: 2.5rem!important;
+      margin: 0;
+    }
+
+    footer.social {
+      padding: 1rem 1rem!important;
+    }
+
   }
 }
 
