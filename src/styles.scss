@@ -48,3 +48,25 @@ html, body {
     padding: 5% 9%!important;
   }
 }
+
+@keyframes noise-1 {
+  $steps: 20;
+  @for $i from 1 through $steps {
+    #{percentage($i*calc(1 / $steps))} {
+      $top: random(70);
+      $bottom: random(71 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+
+@keyframes noise-2 {
+  $steps: 30;
+  @for $i from 0 through $steps {
+    #{percentage($i*calc(1 / $steps))} {
+      $top: random(70);
+      $bottom: random(71 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
