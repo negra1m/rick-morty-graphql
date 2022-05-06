@@ -24,11 +24,11 @@
     & > .img {
       justify-self: center;
       min-width: 90%;
-      max-width: 250px;
+      max-width: 100px;
       max-height: 25%;
 
       & > img {
-        width: 100%;
+        max-width: 200px;
         border-radius: 10px;
 
       }

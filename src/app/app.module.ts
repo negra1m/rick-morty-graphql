@@ -7,7 +7,7 @@ import { GraphQLModule } from './graphql.module';
 import { CardViewerComponent } from './screens/card-viewer/card-viewer.component';
 import { MainPageComponent } from './screens/main-page/main-page.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { TabViewModule } from 'primeng/tabview';
 
 @NgModule({
   declarations: [
@@ -19,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     GraphQLModule,
+    TabViewModule,
     HttpClientModule,
     AppRoutingModule
   ],

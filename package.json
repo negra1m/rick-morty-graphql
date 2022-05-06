@@ -19,14 +19,15 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@apollo/client": "^3.0.0",
     "@uit/glitch-image": "0.0.11",
     "apollo-angular": "^3.0.1",
     "font-awesome": "^4.7.0",
+    "graphql": "^16",
+    "primeng": "^13.3.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4",
-    "@apollo/client": "^3.0.0",
-    "graphql": "^16"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.5",

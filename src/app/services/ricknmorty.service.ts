@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
-import { map } from 'rxjs';
-import { requests } from '../models/request.model';
+import { gql } from 'apollo-angular';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +8,50 @@ import { requests } from '../models/request.model';
 export class RicknmortyService {
   constructor(private readonly apollo: Apollo) { }
 
-  getAllCharacters() {
+  getAllCharacters(page: number) {
     return this.apollo.query<any>({
-      query: requests.GET_CHARACTERS
+      query: gql`
+      {
+        characters(page: ${page}) {
+          info {
+            next
+            prev
+            count
+            pages
+          }
+          results {
+            name
+            status
+            origin {
+              name
+            }
+            image
+            episode {
+              name
+            }
+          }
+        }
+      }
+    `,
+    })
+  }
+
+  getAllLocations(page: number) {
+    return this.apollo.query<any>({
+      query: gql`
+      {
+        locations(page: ${page}) {
+          info {
+            count
+          }
+          results {
+            name
+            type
+            dimension
+          }
+        }
+      }
+    `
     })
   }
 }
