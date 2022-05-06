@@ -11,7 +11,7 @@ $holo-color: #00fcfc;
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
-    width: 60%;
+    max-width: 60%;
 
 
     p {
@@ -189,16 +189,6 @@ $holo-color: #00fcfc;
   z-index: 9999;
   margin-left: 20px;
   margin-right: 20px;
-}
-
-h1 {
-  margin: 0;
-  padding: 2rem 1rem;
-  color: #11b1c9;
-  font-size: 3rem;
-  font-family: 'Riick';
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #c9dc61;
 }
 
 :host {
