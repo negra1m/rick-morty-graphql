@@ -16,7 +16,7 @@
           "strict": true
         }
       },
-      "root": "",
+      "root": "e2e",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
