@@ -7,18 +7,21 @@ import { GraphQLModule } from './graphql.module';
 import { CardViewerComponent } from './screens/card-viewer/card-viewer.component';
 import { MainPageComponent } from './screens/main-page/main-page.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { TabViewModule } from 'primeng/tabview';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     CardComponent,
-    CardViewerComponent
+    CardViewerComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     GraphQLModule,
+    TabViewModule,
     HttpClientModule,
     AppRoutingModule
   ],

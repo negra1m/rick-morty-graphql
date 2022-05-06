@@ -1,3 +1,14 @@
 <ng-container >
-
+  <div class="selection">
+    <p-tabView>
+      <p-tabPanel tooltip="Characters" header="Characters" [selected]="true">
+        <div *ngFor="let item of charList" class="card">
+          <app-card [cardData]="item"></app-card>
+        </div>
+      </p-tabPanel>
+      <p-tabPanel tooltip="Location" header="Location">
+        <app-card *ngFor="let item of locationList"></app-card>
+      </p-tabPanel>
+  </p-tabView>
+  </div>
 </ng-container>

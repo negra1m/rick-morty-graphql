@@ -1,4 +1,3 @@
-
 import { MainPageComponent } from './screens/main-page/main-page.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
