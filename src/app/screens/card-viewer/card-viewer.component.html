@@ -1,13 +1,15 @@
 <ng-container >
   <div class="selection">
     <p-tabView>
-      <p-tabPanel tooltip="Characters" header="Characters" [selected]="true">
+      <p-tabPanel  headerStyleClass="header-selection" tooltip="Characters"  header="Characters">
         <div class="cards">
           <app-card *ngFor="let item of charList" [cardData]="item"></app-card>
         </div>
       </p-tabPanel>
-      <p-tabPanel tooltip="Location" header="Location">
+      <p-tabPanel headerStyleClass="header-selection" tooltip="Location" header="Location">
+        <div class="cards">
         <app-card *ngFor="let item of locationList"></app-card>
+        </div>
       </p-tabPanel>
   </p-tabView>
   </div>
