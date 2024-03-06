@@ -6,12 +6,19 @@ import { CardData } from 'src/app/models/card-data.model';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
   @Input() cardData!: CardData;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  getEnumStatus(status: string): string {
+    switch(status) {
+      case 'ALIVE':
+        return 'Personagem vivo'
+      case 'unknown':
+      default:
+        return 'Status desconhecido'
+      case 'Dead':
+        return 'Personagem morreu x.x'
+    }
   }
 
 }
