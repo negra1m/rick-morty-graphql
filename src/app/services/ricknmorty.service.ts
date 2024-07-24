@@ -43,7 +43,10 @@ export class RicknmortyService {
       {
         locations(page: ${page}) {
           info {
+            next
+            prev
             count
+            pages
           }
           results {
             id
