@@ -1,6 +1,6 @@
 # Rick & Morty Characters
 ![image](https://github.com/user-attachments/assets/d58cfd32-73be-4093-b180-9e863c6d6c7d)
-![image](https://github.com/user-attachments/assets/455fdc58-0786-4d6d-bdca-a8d5e3cc6fcd)
+![image](https://github.com/user-attachments/assets/3f307400-5973-4a89-a636-78d61ff764ac)
 
 
 ## Angular + GraphQL
