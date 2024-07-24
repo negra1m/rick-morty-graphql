@@ -1,0 +1,174 @@
+<html id="page" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="styles/main.css" />
+		<link rel="stylesheet" href="styles/container.css" />
+		<link rel="stylesheet" href="styles/footer.css" />
+		<title>Portfolio - FIAP</title>
+	</head>
+	<header id="header" class="header">
+		<div id="menu" class="menu">
+			<div id="items" class="item -invisible">
+				My first Portfolio!
+			</div>
+		</div>
+		<div id="data" class="data">
+			<div class="image">
+				<img src="assets/images/main-photo.jpg" />
+			</div>
+			<div class="content">
+				<p class="title">< Vinícius Negrão / ></p>
+				<p>Angular | TS | JS | CSS</p>
+				<p>UX | WedDesigner por Hobby</p>
+				<div class="description">
+					<img src="assets/images/js-logo.png" alt="js-logo" />
+					<p>Js Lover... <3</p>
+				</div>
+			</div>
+		</div>
+	</header>
+	<body>
+		<a href="#page" id="top" class="top -invisible">Ir para o topo!</a>
+
+		<div class="main-container">
+			<div class="check-out">
+				<h3 style="color: #fff">Check out my Portfolio!</h3>
+			</div>
+
+			<section class="container">
+				<h2 class="container-title">Skills</h2>
+				<label class="container-title label">(hover on some category)</label>
+				<div class="skills -charts">
+					<!-- 
+						A lib de chart usada (CHARTJS) apresenta alguns bugs 
+						no hover.
+					-->
+					<div class="text">
+						<p class="chartLink">HTML</p>
+						<p class="chartLink">JS</p>
+						<p class="chartLink">CSS</p>
+						<p class="chartLink">ANGULAR</p>
+						<p class="chartLink">UX</p>
+					</div>
+					<div class="bar chart">
+						<canvas id="chart" width="400" height="400"></canvas>
+					</div>
+				</div>
+				<div class="progress-bar"></div>
+			</section>
+			<section class="container">
+				<h2 class="container-title">Projects</h2>
+				<label class="container-title label">check some jobs</label>
+				<div class="jobs">
+					<div class="projects">
+						<p class="projectLink">WEBSITES</p>
+						<p class="projectLink">IONIC</p>
+						<p class="projectLink">ANGULAR</p>
+					</div>
+					<div id="content" class="content">
+						<div id="websites" class="text-info websites">
+							<div>
+								Alguns websites que fiz para descontrair e testar algumas
+								habilidades podem ser vistos <a href="">aqui</a>.
+							</div>
+							<div class="images">
+								<img
+									src="https://webstruxure.co.nz/wp-content/uploads/2017/03/icon_develoment_nobg.png"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div id="ionic" class="ionic">
+							<div>
+								Alguns Apps ionic feitos para atender demandas do setor de
+								engenharia da atual empresa onde trabalho, que podem ser
+								acessados
+								<a href="">aqui</a>.
+							</div>
+							<div class="images">
+								<img
+									src="https://hackr.io/tutorials/learn-ionic/logo/logo-ionic?ver=1555132763"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div id="angular" class="angular">
+							<div>
+								Web Apps Angular são minha principal paixão, o conteudo onde mas
+								tenho confiança e conhecimento dentre as demais áreas em que
+								atuo. Para ver lindos web apps, <a href="">clique aqui</a>
+							</div>
+							<div class="images">
+								<img
+									src="https://blog.ninja-squad.com/assets/images/angular.png"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="progress-bar"></div>
+			</section>
+
+			<section class="container last">
+				<h2 class="container-title">Contact</h2>
+				<label class="container-title label">(enter in contact!)</label>
+				<form class="contact" action="">
+					<input type="text" id="name" placeholder="Insira seu nome" />
+					<input type="text" id="subject" placeholder="Insira o Assunto" />
+					<input type="email" id="email" placeholder="Insira seu email" />
+					<div id="error" class="error-message">
+						Preencha todos os campos antes de enviar...
+					</div>
+					<textarea
+						placeholder="Insira sua mensagem de e-mail..."
+						name=""
+						id="message"
+						cols="30"
+						rows="10"
+					></textarea>
+				</form>
+				<button id="send" class="btn-send" onclick="send()">Enviar</button>
+			</section>
+		</div>
+	</body>
+	<footer>
+		<div class="content">
+			<div class="address">
+				<p>Vinicius Negrão</p>
+				<p>R. Alexandre Andreotti, nº 289 - Mogi das Cruzes - SP </p>
+			</div>
+			<div class="social-bar">
+				<a
+					href="https://www.linkedin.com/in/vinicius-negr%C3%A3o-de-menezes-b2273198/"
+					target="blank"
+				>
+					<img
+						src="https://img.icons8.com/carbon-copy/100/000000/linkedin.png"
+						alt="Linkedin"
+						class="social"
+					/>
+				</a>
+				<a href="https://instagram.com/negra1m/" target="blank">
+					<img
+						src="https://img.icons8.com/carbon-copy/100/000000/instagram-new.png"
+						alt="Instagram"
+						class="social"
+					/>
+				</a>
+				<a href="" target="blank">
+					<img
+						src="https://img.icons8.com/carbon-copy/100/000000/twitter.png"
+						alt="Twitter"
+						class="social"
+					/>
+				</a>
+			</div>
+		</div>
+	</footer>
+	<script src="js/components/page.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/modules/API/api.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+</html>
