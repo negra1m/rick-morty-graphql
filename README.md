@@ -13,4 +13,4 @@ You can check the online version here
 3. Install dependencies `npm install`.
 4. Then run `npm run start`.
 
-The App will start into localhost:8080
+The App will start into localhost:4200
