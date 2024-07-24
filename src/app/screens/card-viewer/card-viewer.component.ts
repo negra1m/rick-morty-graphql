@@ -4,26 +4,53 @@ import { RicknmortyService } from './../../services/ricknmorty.service';
 @Component({
   selector: 'card-viewer',
   templateUrl: './card-viewer.component.html',
-  styleUrls: ['./card-viewer.component.scss']
+  styleUrls: ['./card-viewer.component.scss'],
 })
 export class CardViewerComponent implements OnInit, OnDestroy {
   sub: any;
-  charList:any;
-  locationList:any;
+  charList: any;
+  locationList: any;
+  page: any;
+  pageLocations: any;
 
-  constructor(private readonly ricknmortyService: RicknmortyService) { }
+  constructor(private readonly ricknmortyService: RicknmortyService) {}
 
   ngOnInit(): void {
-    this.sub = this.ricknmortyService.getAllCharacters(1).subscribe((res) => {
+    this.getCharacters(1);
+    this.getLocations(1);
+  }
+
+  changeCardPositionChar(index: number) {
+    let arrayForSort = [...this.charList];
+    index <= 17
+      ? arrayForSort.push(arrayForSort.shift())
+      : arrayForSort.unshift(arrayForSort?.pop());
+    this.charList = arrayForSort;
+  }
+
+  changeCardPositionLocation(index: number) {
+    let arrayForSort = [...this.locationList];
+    index <= 17
+      ? arrayForSort.push(arrayForSort.shift())
+      : arrayForSort.unshift(arrayForSort?.pop());
+    this.locationList = arrayForSort;
+  }
+
+  getCharacters(pageNumber: number) {
+    this.ricknmortyService.getAllCharacters(pageNumber).subscribe((res) => {
       this.charList = res.data.characters.results;
+      this.page = res.data.characters.info;
     });
-    this.sub = this.ricknmortyService.getAllLocations(1).subscribe((res) => {
+  }
+
+  getLocations(pageNumber: number) {
+    this.ricknmortyService.getAllLocations(pageNumber).subscribe((res) => {
       this.locationList = res.data.locations.results;
+      this.pageLocations = res.data.locations.info;
     });
   }
 
   ngOnDestroy(): void {
     this.sub.unsubscribe();
   }
-
 }

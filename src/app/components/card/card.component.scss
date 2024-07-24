@@ -5,9 +5,7 @@
   display: flex;
   flex-direction: column;
   font-family: "Default";
-  height: 60%;
   justify-content: flex-start;
-  margin-bottom: 2rem;
   max-width: 14rem;
   min-height: 30rem;
   min-width: 14rem;
@@ -26,11 +24,22 @@
   }
 
   & > .img {
-    background-color: aqua;
+    background-color: #00ffff;
     justify-self: center;
 
     & > img {
       max-width: 100%;
+    }
+
+    & > span {
+      position: absolute;
+      width: 40px;
+      backdrop-filter: blur(10px);
+      // background-color: black;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 

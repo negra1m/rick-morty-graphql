@@ -1,16 +1,27 @@
 <ng-container >
+  <div class="background-image"></div>
   <div class="selection">
     <p-tabView>
       <p-tabPanel  headerStyleClass="header-selection" tooltip="Characters"  header="Characters">
         <div class="cards">
-          <app-card *ngFor="let item of charList" [cardData]="item"></app-card>
+          <button [disabled]="!page.prev" (click)="getCharacters(page?.prev)">PÁGINA ANTERIOR</button>
+          <div class="carousel">
+            <app-card ngClass="card-{{i}} flex-cc" (click)="changeCardPositionChar(i)" *ngFor="let item of charList; let i = index" [cardData]="item"></app-card>
+          </div>
+          <button [disabled]="!page.next" (click)="getCharacters(page?.next)">PRÓXIMA PÁGINA</button>
         </div>
       </p-tabPanel>
       <p-tabPanel headerStyleClass="header-selection" tooltip="Locations" header="Location">
         <div class="cards">
-        <app-card *ngFor="let item of locationList"></app-card>
+          <button [disabled]="!page.prev" (click)="getLocations(page?.prev)">PÁGINA ANTERIOR</button>
+          <div class="carousel">
+            <app-card class="card-{{i}} flex-cc" *ngFor="let item of locationList; let i = index" (click)="changeCardPositionLocation(i)" [cardData]="item"></app-card>
+          </div>
+          <button [disabled]="!page.next" (click)="getLocations(page?.next)">PRÓXIMA PÁGINA</button>
+
         </div>
       </p-tabPanel>
   </p-tabView>
   </div>
+  <a href="https://github.com/negra1m" target="_blank" class="credits">developed by negra1m</a>
 </ng-container>
