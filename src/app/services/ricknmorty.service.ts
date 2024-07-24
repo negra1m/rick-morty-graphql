@@ -20,6 +20,7 @@ export class RicknmortyService {
             pages
           }
           results {
+            id
             name
             status
             origin {
@@ -45,6 +46,7 @@ export class RicknmortyService {
             count
           }
           results {
+            id
             name
             type
             dimension
